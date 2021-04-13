@@ -31,5 +31,7 @@ public class Main {
         System.out.print("new Branch Commit Push Test");
         System.out.print("new Branch Commit Push Test");
         System.out.print("new Branch Commit Push Test");
+        System.out.print("Hi yina");
+        System.out.print("Hi yina222");
     }
 }
