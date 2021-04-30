@@ -8,6 +8,7 @@ public class BaekJoon4153 {
     public static void main(String[] args) throws Exception{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
+        String test="test";
         while(true){
             StringTokenizer strToken=new StringTokenizer(br.readLine()," ");
             int[] input=new int[3];
