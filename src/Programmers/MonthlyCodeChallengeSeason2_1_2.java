@@ -1,6 +1,6 @@
 package Programmers;
 
-class ProgrammersMonthlyCodeChallengeSeason2_2 {
+class MonthlyCodeChallengeSeason2_1_2 {
 
     public static void main(String[] args) {
         String test="[](){}";
