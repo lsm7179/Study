@@ -39,11 +39,9 @@ public class BaekJoon2580 {
 
     static boolean isPossible(int row, int col,int value){
 
-        for(int i=0;i<9;i++){//가로
-            if(sudoku[row][i]==value) return false;
-        }
-        for(int i=0;i<9;i++){//세로
-            if(sudoku[i][col]==value) return false;
+        for(int i=0;i<9;i++){
+            if(sudoku[row][i]==value) return false; //가로
+            if(sudoku[i][col]==value) return false; //세로
         }
 
         int setSquareRow=row/3;
