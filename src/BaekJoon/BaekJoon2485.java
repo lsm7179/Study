@@ -20,7 +20,7 @@ public class BaekJoon2485 {
             int distance=tree[i+1]-tree[i];
             gcd = GCD(distance,gcd);
         }
-        System.out.println(tree[N-1]/gcd-tree[0]/gcd-(tree.length-1));
+        System.out.println((tree[N-1]-tree[0])/gcd+1-(tree.length));
 
     }
 
