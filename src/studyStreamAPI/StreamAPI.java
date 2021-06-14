@@ -5,10 +5,6 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/*
-* 스트림api는 자바8 부터 추가된 기능으로 컬렉션, 배열 등의 저장 요소를 하나씩 참조하며 함수형 인터페이스(람다식)를
-* 적용하며 반복적으로 처리할 수 있도록 해주는 기능
-* */
 public class StreamAPI {
 
     public static void main(String[] args) {
@@ -17,7 +13,7 @@ public class StreamAPI {
         //list 복사
         List<String> sortingNames = names.stream().collect(Collectors.toList());
 
-        //쿼리 like 검색
+        //Stream 검색
         names.stream().filter(x -> x.contains("이")).forEach(x-> System.out.println("이 글자가 포함된 이름 : "+x));
 
         //쿼리 filter 여러개
@@ -45,9 +41,6 @@ public class StreamAPI {
         names.stream().min(Comparator.naturalOrder()).ifPresent(x-> System.out.println("최소값 : "+x));
         names.stream().max(Comparator.naturalOrder()).ifPresent(x-> System.out.println("최대값 : "+x));
     }
-
-
-
 }
 
 
