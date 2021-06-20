@@ -3,7 +3,7 @@ package BaekJoon;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class BeakJoon6588 {
+public class BaekJoon6588 {
     static boolean[] isPrimeNumbers=new boolean[1000001];
     public static void main(String[] args) throws Exception{
         BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
