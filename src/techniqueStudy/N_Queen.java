@@ -1,3 +1,5 @@
+package techniqueStudy;
+
 import java.util.Scanner;
 
 public class N_Queen {
