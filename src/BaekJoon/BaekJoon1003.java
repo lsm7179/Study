@@ -3,7 +3,7 @@ package BaekJoon;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class BakJoon1003 {
+public class BaekJoon1003 {
 
     static int[] result=new int[41];
     public static void main(String[] args) throws Exception{
