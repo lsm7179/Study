@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class BackJoon2606 {
+public class BaekJoon2606 {
     static int node[][]; // 그래프 배열
     static boolean isVisited[]; // 방문 배열
 
