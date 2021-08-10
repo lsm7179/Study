@@ -16,9 +16,9 @@ public class BaekJoon6603 {
             k=Integer.parseInt(input[0]);
             s=new int[k];
             chk=new boolean[k];
-            for(int i=0;i<k;i++){
+            for(int i=0;i<k;i++){//초기 값 세팅
                 s[i]=Integer.parseInt(input[i+1]);
-            } //초기 값 세팅
+            }
 
             dfs(0,0);
             System.out.println();
