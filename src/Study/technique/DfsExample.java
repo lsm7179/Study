@@ -1,4 +1,4 @@
-package techniqueStudy;
+package Study.technique;
 
 import java.util.Iterator;
 import java.util.LinkedList;
