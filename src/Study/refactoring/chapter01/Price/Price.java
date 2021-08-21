@@ -7,5 +7,9 @@ public abstract class Price {
 
     //비디오 종류별 대여료 계산
     public abstract double getCharge(int daysRented);
+
+    public int getFrequentRenterPoints(int daysRented) {
+        return 1;
+    }
 }
 
