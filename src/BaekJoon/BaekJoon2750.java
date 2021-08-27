@@ -13,8 +13,20 @@ public class BaekJoon2750 {
         for (int i = 0; i < array.length; i++) {
             array[i] = Integer.parseInt(br.readLine());
         }
-        bubbleSort();
+        insertionSort();
         printArray();
+    }
+
+    public static void insertionSort() {
+        for (int i = 1; i < array.length; i++) {
+            int temp = array[i];
+            int aux = i - 1;
+            while (aux >= 0 && (array[aux] > temp)) {
+                array[aux + 1] = array[aux];
+                aux--;
+            }
+            array[aux + 1] = temp;
+        }
     }
 
     public static void bubbleSort() {
