@@ -30,6 +30,7 @@ public class HeapSort {
         int rNode=pNode*2+2; //오른쪽 자식노드
 
         // size > lNode => 인덱스 범위를 넘어서는지 확인하기 위함.
+        // arr[parent] < arr[lNode] 부모와 자식의 값을 확인
         if(size > lNode && arr[parent] < arr[lNode]){
             parent = lNode;
         }
@@ -44,7 +45,7 @@ public class HeapSort {
             swap(arr,pNode,parent);
 
             /** 노드와 자리를 바꾸면 최대힙 기준에 맞지 않을 수 있기 때문에
-            *   바뀐 자식노드 아래 최대힙으로 맞춰주기 위함
+            *   바뀐 자식노드 아래 최대힙으로 맞춰주기 위함 **중요한 포인트!
             * */
             heapify(arr,size,parent);
         }
