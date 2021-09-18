@@ -26,7 +26,7 @@ public class HeapSort {
     private static void heapify(int[] nums, int start, int end) {
         for (int i = start; i < end; i++) {
             int childIdx = i;
-            while(childIdx != 0) {
+            while(childIdx != 0) {//0 을 제외하고 모든 인덱스는 부모노드가 있다.
                 int rootIdx = (childIdx - 1) / 2;
                 if(nums[rootIdx] < nums[childIdx]) {
                     swap(nums, childIdx, rootIdx);
