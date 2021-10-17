@@ -40,6 +40,10 @@ public class StreamAPI {
         //최대, 최소값 구하기
         names.stream().min(Comparator.naturalOrder()).ifPresent(x-> System.out.println("최소값 : "+x));
         names.stream().max(Comparator.naturalOrder()).ifPresent(x-> System.out.println("최대값 : "+x));
+
+        //anyMatch -> 매칭되는게 있는지 확인
+        boolean result = names.stream().anyMatch(item -> item.equals("홍길동"));
+        System.out.println(result);
     }
 }
 
