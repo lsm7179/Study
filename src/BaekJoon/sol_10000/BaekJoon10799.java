@@ -1,4 +1,4 @@
-package BaekJoon;
+package BaekJoon.sol_10000;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
