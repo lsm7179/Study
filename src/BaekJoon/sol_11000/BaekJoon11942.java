@@ -1,4 +1,4 @@
-package BaekJoon;
+package BaekJoon.sol_11000;
 
 import java.io.IOException;
 
