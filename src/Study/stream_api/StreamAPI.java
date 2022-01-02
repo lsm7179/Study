@@ -1,4 +1,4 @@
-package Study.StreamAPI;
+package Study.stream_api;
 
 import java.util.Arrays;
 import java.util.Comparator;
