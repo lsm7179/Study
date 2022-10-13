@@ -1,5 +1,7 @@
 package Programmers;
 import java.util.*;
+import java.util.stream.Collectors;
+
 // https://school.programmers.co.kr/learn/courses/30/lessons/42579
 // https://velog.io/@yanghl98/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EB%B2%A0%EC%8A%A4%ED%8A%B8%EC%95%A8%EB%B2%94-JAVA%EC%9E%90%EB%B0%94
 public class Solution_42579 {
@@ -63,6 +65,13 @@ public class Solution_42579 {
         for(int i =0; i < result.size();i++){
             answer[i] = result.get(i).idx;
         }
+
+        result.stream()
+                .map(r -> r.idx)
+                .collect(Collectors.toList())
+                .stream()
+                .mapToInt(Integer::intValue)
+                .toArray();
 
         return answer;
     }
