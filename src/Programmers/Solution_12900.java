@@ -13,7 +13,7 @@ public class Solution_12900 {
     public static void main(String[] args) {
         // 1 2 3 4 5
         // 1 2 3 5 8
-        int result = solution(4);
+        int result = solution(5);
         System.out.println(result);
     }
     public static int solution(int n) {
