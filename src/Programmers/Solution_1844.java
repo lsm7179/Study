@@ -1,17 +1,21 @@
 package Programmers;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 // https://school.programmers.co.kr/learn/courses/30/lessons/1844?language=java
 // 게임 맵 최단거리
 public class Solution_1844 {
     static int answer = 0;
 
     //백트래킹으로 풀어야될듯함.
-    // https://houcouonchi.tistory.com/13 이걸 보고 해결해보기.
     public static void main(String[] args) {
         int[][] test = {{1, 1}, {1, 1}};
         int[][] test2 = {{1}, {1}};
-        System.out.println(solution(test)); // 3
-        System.out.println(solution(test2)); //2
+        // System.out.println(solution(test)); // 3
+        // System.out.println(solution(test2)); //2
+        System.out.println(solution2(test));
+        System.out.println(solution2(test2));
     }
 
     public static int solution(int[][] maps) {
@@ -52,5 +56,58 @@ public class Solution_1844 {
         }
 
 
+    }
+
+
+    public static int solution2(int[][] maps) {
+        int answer = -1;
+
+        if (maps[0][0] == 0) {
+            return answer;
+        }
+
+        int xLen = maps.length;
+        int yLen = maps[0].length;
+
+        int[][] distance = new int[xLen][yLen];
+        boolean[][] visited = new boolean[xLen][yLen];
+
+        int[] X = new int[]{-1, 0, 1, 0};
+        int[] Y = new int[]{0, -1, 0, 1};
+
+        int[] first = new int[]{0, 0};
+        Queue<int[]> que = new LinkedList<>();
+        que.offer(first);
+        visited[0][0] = true;
+        distance[0][0] = 1;
+
+        while (!que.isEmpty()) {
+
+            int[] now = que.poll();
+            int x = now[0];
+            int y = now[1];
+
+            for (int i = 0; i < 4; i++) {
+                int nX = x + X[i];
+                int nY = y + Y[i];
+
+                if (nX < 0 || nX >= xLen || nY < 0 || nY >= yLen) continue;
+                if (visited[nX][nY]) continue;
+                if (maps[nX][nY] == 0) continue;
+
+                int[] next = new int[]{nX, nY};
+                distance[nX][nY] = distance[x][y] + 1;
+                visited[nX][nY] = true;
+                que.offer(next);
+
+            }
+
+            if (x == xLen - 1 && y == yLen - 1){
+                return distance[x][y];
+            }
+
+        }
+
+        return answer;
     }
 }
