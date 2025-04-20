@@ -7,12 +7,13 @@ public class FinalizeEscapeGc {
         System.out.println("Yes, I'm still alive :)");
     }
 
-        @Override
+    /*
+    @Override
     protected void finalize() throws Throwable {
         super.finalize();
         System.out.println("finalize method executed!");
         FinalizeEscapeGc.Save_hook = this;
-    }
+    }*/
 
     public static void main(String[] args) {
         Save_hook = new FinalizeEscapeGc();
